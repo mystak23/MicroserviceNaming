@@ -11,13 +11,17 @@ class Program
 {
     static void Main(string[] args) 
     {
-        string input = @"{
-        'Category':'neco',
-        'Subcategory':'neco',
-        'Description':'neco'
+        //definovane pouze pro priklad, jinak se bude ziskavat z inputu
+        string input = @"{ 
+        'Title':'short form of title',
+        'Tags':'neco',
+        'LogSource':'neco',
+        'Description':'raw description'
         }";
 
         string usecase = getOneUseCase(input);
+        
+        Console.WriteLine("Generated name: " + usecase);
 
         //je potreba si definovat, zda microservice udela jen jeden name a bude se volat neustale, nebo zde bude nejaky loop
         
@@ -25,7 +29,8 @@ class Program
 
         while (condition)
         {
-            string usecase = getOneUseCase(input);
+            string usecase = getOneUseCase(input);            
+            Console.WriteLine("Generated name: " + usecase);
         }*/
     }
 
